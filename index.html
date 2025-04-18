@@ -37,6 +37,16 @@
   </div>
 
   <script>
+    function changeStatus(status) {
+  const indicator = document.getElementById('statusIndicator');
+  if (status === 'online') {
+    indicator.style.background = 'limegreen';
+  } else if (status === 'away') {
+    indicator.style.background = 'orange';
+  } else {
+    indicator.style.background = 'gray';
+  }
+}
     let currentUser = "";
     let currentChat = "";
     const messages = {};
@@ -118,5 +128,7 @@
 
     });
   </script>
+  }
+}
 </body>
 </html>
